@@ -1,0 +1,8 @@
+all : sender measure
+.PHONY : all
+sender : sender.c transfer.h
+	gcc -Wall -O2 sender.c -o sender
+measure : measure.c transfer.h
+	gcc -Wall -O2 measure.c -o measure
+clean :
+	rm sender measure
